@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48"
+                id="BlogAdfRestMethodAppModule_EmployeesViewResources"
+                Package="de.hahn.blog.adfrestmethod.RESTmodel.facade.rest.v0" usageMode="RESTClient">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeesView1" RangeSize="25" DataControl="BlogAdfRestMethodAppModuleDataControl"
+              id="EmployeesView1Iter"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeesView1Iter" id="Employees" AccessorFolder="Always">
+      <ServiceConfiguration EnableRowContextLOV="false"/>
+      <nodeDefinition DefName="de.hahn.blog.adfrestmethod.RESTmodel.views.EmployeesView"
+                      Name="de.hahn.blog.adfrestmethod.RESTmodel.views.EmployeesView" DiscrName="_Sys_Accessor"/>
+    </tree>
+  </bindings>
+</pageDefinition>

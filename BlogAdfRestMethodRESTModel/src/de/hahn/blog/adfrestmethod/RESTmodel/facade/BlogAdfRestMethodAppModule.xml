@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="BlogAdfRestMethodAppModule"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="de.hahn.blog.adfrestmethod.RESTmodel.views.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="de.hahn.blog.adfrestmethod.RESTmodel.views.EmployeesView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="de.hahn.blog.adfrestmethod.RESTmodel.views.links.EmpManagerFkLink"
+    SrcViewUsageName="de.hahn.blog.adfrestmethod.RESTmodel.facade.BlogAdfRestMethodAppModule.EmployeesView1"
+    DstViewUsageName="de.hahn.blog.adfrestmethod.RESTmodel.facade.BlogAdfRestMethodAppModule.EmployeesView2"
+    Reversed="false"/>
+</AppModule>

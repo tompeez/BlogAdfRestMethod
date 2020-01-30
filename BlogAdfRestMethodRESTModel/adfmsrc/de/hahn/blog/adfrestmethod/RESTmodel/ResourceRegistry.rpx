@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.22.48" id="ResourceRegistry"
+             SeparateXMLFiles="false" Package="de.hahn.blog.adfrestmethod.RESTmodel" ClientType="Generic">
+  <pageMap>
+    <page path="v0_Employees" usageId="v0_BlogAdfRestMethodAppModule_EmployeesViewResources"/>
+  </pageMap>
+  <dataControlUsages>
+    <BC4JDataControl id="BlogAdfRestMethodAppModuleDataControl" Package="de.hahn.blog.adfrestmethod.RESTmodel.facade"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="BlogAdfRestMethodAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+  <pageDefinitionUsages>
+    <page id="v0_BlogAdfRestMethodAppModule_EmployeesViewResources"
+          path="de.hahn.blog.adfrestmethod.RESTmodel.facade.rest.v0.BlogAdfRestMethodAppModule_EmployeesViewResources"/>
+  </pageDefinitionUsages>
+</Application>
